@@ -1,0 +1,62 @@
+.task-container {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+  margin: 15px;
+  width: 40%;
+  border: 20px solid #000000;
+  text-align: center;
+  overflow-block: clip;
+  border-radius: 20px;
+}
+
+.complete {
+  text-decoration: line-through black;
+  background-color: #ffbf00;
+  border: 20px solid #000000;
+  color: #fff;
+}
+
+.title {
+  text-shadow: 0 0 3px rgb(141, 2, 25);
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #ffbf00;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.button-tsk {
+  font-size: 15px;
+  border-radius: 9px;
+  padding: 10px 12px;
+  margin: 7px;
+  border: solid rgb(137, 194, 141);
+  background-color: rgb(137, 194, 141);
+
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  justify-self: center;
+  transition-duration: 0.3s;
+}
+
+.button-tsk:hover {
+  background-color: #333;
+  color: white;
+}
+
+.remove {
+  border: solid red;
+  background-color: red;
+}
