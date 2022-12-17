@@ -1,6 +1,5 @@
 .tasks-container {
   background-color: #ffbf00;
-  height: 200 px;
   display: flex;
   border-radius: 16px;
   border: 10px solid #000000;
@@ -9,12 +8,9 @@
 }
 
 .create {
-  font-size: 19px;
   background-color: #000000;
   color: beige;
   border-color: #000000;
-  height: 50px;
-  width: 45%;
 }
 
 .create:hover {

@@ -3,8 +3,8 @@ class Task {
     this.id = id;
     this.title = title;
     this.description = description;
-    this.creationDate = creationDate;
     this.completed = completed;
+    this.creationDate = creationDate;
   }
 }
 

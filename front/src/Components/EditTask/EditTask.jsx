@@ -10,10 +10,9 @@ const EditTask = () => {
   const navigate = useNavigate();
 
   const editHandler = () => {
-    TaskServices.update(params.id, title, description).catch((error) =>
-      console.log(error)
-    );
-    navigate("/");
+    TaskServices.update(params.id, title, description)
+    .then(() => navigate("/"))
+    .catch((error) => console.log(error));
   };
 
   useEffect(() => {

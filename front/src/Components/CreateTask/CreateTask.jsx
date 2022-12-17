@@ -11,7 +11,7 @@ const CreateTask = () => {
 
   const clickHandler = () => {
     TaskServices.create(title, description)
-      .then(navigate("/"))
+      .then(() => navigate("/"))
       .catch((error) => console.log(error));
   };
 

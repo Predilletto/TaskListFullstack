@@ -1,9 +1,11 @@
 import axios from "axios";
 
+const url = "http://localhost:3030/api";
+
 class TaskServices {
   static create = async (title, description) => {
-    axios
-      .post("http://localhost:3030/api/tasks/", {
+    await axios
+      .post(`${url}/tasks/`, {
         title: title,
         description: description,
       })
@@ -11,24 +13,20 @@ class TaskServices {
   };
 
   static list = async () => {
-    let response = await axios
-      .get("http://localhost:3030/api/tasks")
-      .catch((error) => console.log(error));
-
-    return response.data;
+    return axios.get(`${url}/tasks`);
   };
 
   static retrieve = async (id) => {
     let response = await axios
-      .get(`http://localhost:3030/api/task/${id}`)
-      .catch((error) => console.log(error));
+      .get(`${url}/task/${id}`)
+      .catch((error) => error);
 
     return response.data;
   };
 
   static complete = async (id, completed) => {
     let response = await axios
-      .patch(`http://localhost:3030/api/task/${id}`, {
+      .patch(`${url}/task/${id}`, {
         completed: completed,
       })
       .catch((error) => console.log(error));
@@ -37,7 +35,7 @@ class TaskServices {
 
   static update = async (id, title, description) => {
     let response = await axios
-      .patch(`http://localhost:3030/api/task/${id}`, {
+      .patch(`${url}/task/${id}`, {
         title: title,
         description: description,
       })
@@ -47,7 +45,7 @@ class TaskServices {
 
   static remove = async (id) => {
     let response = await axios
-      .delete(`http://localhost:3030/api/task/${id}`)
+      .delete(`${url}/task/${id}`)
       .catch((error) => console.log(error));
     return response.data;
   };

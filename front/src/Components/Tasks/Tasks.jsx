@@ -11,14 +11,15 @@ const Tasks = () => {
 
   useEffect(() => {
     let response = TaskServices.list();
-    response.then((tasks) => {
+    response.then((res) => {
+      let tasks = res.data;
       let tasksSorted = tasks.sort((x, y) => {
         x = new Date(x.creationDate);
         y = new Date(y.creationDate);
         return y.getTime() - x.getTime();
       });
       setTasks(tasksSorted);
-    });
+    }).catch(err => console.log("Erro", err));
   }, []);
 
   return (

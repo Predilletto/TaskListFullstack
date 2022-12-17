@@ -11,15 +11,16 @@ const Task = ({ task }) => {
 
   const clickHandler = async () => {
     await TaskServices.complete(task.id, !state)
-      .then(setState(!state))
+      .then(() => setState(!state))
       .catch((error) => console.log(error));
   };
 
   const removeHandler = () => {
     TaskServices.remove(task.id)
-      .then(window.location.reload(false))
+      .then(() => window.location.reload(false))
       .catch((error) => console.log(error));
   };
+
   let completeCheck = state ? " complete" : null;
 
   return (
