@@ -1,4 +1,5 @@
 .tasks-container {
+  width: 98%;
   background-color: #ffbf00;
   display: flex;
   border-radius: 16px;
