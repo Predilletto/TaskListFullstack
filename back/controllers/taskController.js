@@ -77,6 +77,7 @@ const deleteTask = async (req, res) => {
   try {
     const id = req.params.id;
     await firestore.collection("tasks").doc(id).delete();
+
     res.send("Record deleted successfuly");
   } catch (error) {
     res.status(400).send(error.message);
